@@ -19,26 +19,23 @@ public class CalculadoraTest {
 
     @Test
     public void testSumar() {
-        float resultado = calculadora.sumar(4, 6);
-        assertEquals(10, resultado, 0);
+        assertEquals(10, calculadora.sumar(4, 6), 0);
     }
 
     @Test
     public void testRestar() {
-        float resultado = calculadora.restar(4, 6);
-        assertEquals(-2, resultado, 0);
+        assertEquals(-2, calculadora.restar(4, 6), 0);
     }
 
     @Test
     public void testMultiplicar() {
-        float resultado = calculadora.multiplicar(4, 6);
-        assertEquals(24, resultado, 0);
+        assertEquals(24, calculadora.multiplicar(4, 6), 0);
     }
 
     @Test
     public void testDividir() {
-        float resultado = calculadora.dividir(6, 4);
-        assertEquals(1.5, resultado, 0);
+        assertEquals("6 dividido a 4 es 1.5", 1.5, calculadora.dividir(6, 4), 0);
+        assertEquals("1 dividido a 2 es 0.5", 0.6, calculadora.dividir(1, 2), 0.1);
     }
 
     @Test(expected = Exception.class)
